@@ -87,3 +87,46 @@ let nombre  = localStorage.getItem('unNombre');
 
 //* ------------------------------------------------------------------ *//
 
+
+let board2 = Chessboard('board2', {
+    draggable: false,
+    dropOffBoard: 'trash',
+    sparePieces: true
+  })
+  
+  $('#startBtn').on('click', board2.start)
+  $('#clearBtn').on('click', board2.clear)
+
+ //*------------------------------------------------------------------ *//
+
+
+  fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'GAMBITO',
+  body: JSON.stringify({
+    title: 'Dama',
+    body: 'Chess',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+  console.log (fetch('https://jsonplaceholder.typicode.com/posts/1') )
+
+//*----------------------------------------------------- *//
+res.setHeader('Content-Type', 'text/plain');
+
+res.end('Hello World\n');
+
+
+// Mi idea era hacer un tablero de ajedrez que sea jugable, entonces busqué en muchas partes pero el código es relativamente largo y hace uso de ReactJS
+// Entonces, agregué varias lineas de código con solo JS y este proyecto es para ampliarlo en mi futuro, tendrá base de datos y todo, pero necesito ReactJS y es la cursada en donde estoy ahora mismo.
+// Muchas gracias.
